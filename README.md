@@ -25,7 +25,7 @@ tinypng批量压缩工具。
 
 ```
 ./${os}-${BINARY}-${VERSION}
-Usage of ./gomysql2struct:
+Usage of ./${os}-${BINARY}-${VERSION}:
   -i input文件夹
   -o output文件夹
 ```
