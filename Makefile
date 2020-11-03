@@ -12,13 +12,10 @@ release:
 		rm -rf bin/*tinypng*
 		# Build for mac
 		CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o bin/mac-${BINARY}-${VERSION} cmd/main.go
-		chmod +x bin/mac-${BINARY}-${VERSION}
 		# Build for linux
 		CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build  -o bin/linux-${BINARY}-${VERSION} cmd/main.go
-		chmod +x bin/linux-${BINARY}-${VERSION}
 		# Build for win
 		CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o bin/win-${BINARY}-${VERSION}.exe cmd/main.go
-		chmod +x bin/win-${BINARY}-${VERSION}.exe
 		go clean
 # Cleans our projects: deletes binaries
 clean:
