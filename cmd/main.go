@@ -162,7 +162,7 @@ func work(argInDir, argOutDir string, sourceInfo *StSourceInfo, wg *sync.WaitGro
 		tinyReqCount := 0
 	GotoTiny:
 		tinyStatus, tinyResp, errs := gorequest.New().
-			Post("https://tinypng.com/web/shrink").
+			Post("https://tinypng.com/backend/opt/shrink").
 			Set("Cookie", cookie).
 			Set("X-Forwarded-For", randomIP).
 			Set("Referer", "https://tinypng.com/").
